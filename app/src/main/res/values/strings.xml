@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Geodesia</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="subtitulo_presentacion">Presentación de la aplicación</string>
+    <string name="conversion_coordenadas">Conversión de coordenadas</string>
+    <string name="geodesicas_utm">Geodésicas a UTM</string>
+    <string name="utm_geodesicas">UTM a geodésicas</string>
+    <string name="anamorfosis_lineal">Anamorfosis lineal</string>
+    <string name="coordenadas_geodesicas">Coordenadas geodésicas</string>
+    <string name="coordenadas_utm">Coordenadas UTM</string>
+    <string name="convergencia">Convergencia de meridianos</string>
+    <string name="distancias">Conversión de distancias</string>
+    <string name="reducida_utm">Distancia reducida a UTM</string>
+    <string name="utm_reducida">Distancia UTM a reducida</string>
+
+    <string name="generar_informe">Generar informe de cálculo</string>
+    <string name="enviar_informe">Enviar informe por correo</string>
+
+    <string name="presentacion1">Aplicación para todo tipo de cálculos geodésicos, e impresión de resutlados en un archivo de texto. Esta opción se encuentra en el botón "menú" del dispositivo.</string>
+    <string name="presentacion2">Aplicación desarrollada por Víctor Palma Carrasco, Ingeniero técnico en Topografía, y Android Developer especializado en aplicaciones para Topografía, Geodesia e Ingeniería Civil.</string>
+
+    <string name="ficheros_texto">Ejemplos de fichero de texto.</string>
+    <string name="sub_ficheros_texto">Para poder leer las coordenadas de un fichero de texto, el fichero debe tener una estructura específica. Presiona este recuadro para generar un fichero de ejemplo, según la herramienta utilizada.</string>
+    <string name="geodesicas_utm_pres">Transformación de coordenadas geodésicas en coordenadas UTM, a través del problema directo.</string>
+
+    <string name="selecciona_informe">Selecciona un fichero de ejemplo</string>
+
+    <string name="nuevo_elipsoide">Añadir nuevo elipsoide</string>
+    <string name="anadir_coordenadas">Añadir coordenadas</string>
+    <string name="desde_archivo">Desde archivo</string>
+    <string name="introducir_coordenada">Introducir coordenada</string>
+    <string name="lista_coordenadas">Lista de coordenadas</string>
+    <string name="selecciona_elipsoide">Selecciona elipsoide</string>
+    <string name="borrar_todo">Borrar todo</string>
+    <string name="calcular">Calcular</string>
+    <string name="coordenadas_calculadas">Coordenadas calculadas</string>
+
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="longitud_mc">Longitud meridiano central</string>
+    <string name="grados">Grados</string>
+    <string name="minutos">Minutos</string>
+    <string name="segundos">Segundos</string>
+
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="atras">Atrás</string>
+
+    <string name="recuerda">Recuerda</string>
+    <string name="recuerda_hemisferio_sur">En el hemisferio sur, la latitud debe tener valor negativo</string>
+    <string name="recuerda_continente_americano">Para el continente americano, los valores de longitud, y longitud del meridiano central, deben ser negativos.</string>
+    <string name="no_valores_vacios">No se pueden dejar valores vacíos</string>
+
+    <string name="selecciona_archivo">Selecciona un archivo</string>
+    <string name="inicio">Inicio</string>
+    <string name="carpeta">Carpeta</string>
+    <string name="archivo_texto">Archivo de texto</string>
+    <string name="archivo_desconocido">Archivo desconocido</string>
+
+    <string name="ruta_actual">Ruta actual</string>
+    <string name="accion_no_permitida">Acción no permitida</string>
+    <string name="fichero_de_texto">Fichero de texto</string>
+    <string name="base_datos">Base de datos</string>
+    <string name="Selecciona_fuente">Selecciona desde donde quieres obtener los datos</string>
+
+    <string name="datos_punto">Datos del punto</string>
+    <string name="hint_proyecto_nombre">Proyecto nombre</string>
+    <string name="lista_encontrados">Lista de puntos encontrados</string>
+
+
+    <string name="atencion">Atención!!</string>
+    <string name="no_base_datos">La aplicación Base de Datos no se encuentra disponible</string>
+    <string name="comprar">Comprar</string>
+
+    <string name="msg_landa_mc">Antes de seleccionar un punto, debes introducir la longitud del meridiano central correspondiente</string>
+
+</resources>

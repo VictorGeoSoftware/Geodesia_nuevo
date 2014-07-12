@@ -73,7 +73,7 @@
     <string name="Selecciona_fuente">Selecciona desde donde quieres obtener los datos</string>
 
     <string name="datos_punto">Datos del punto</string>
-    <string name="hint_proyecto_nombre">Proyecto nombre</string>
+    <string name="hint_proyecto_nombre">Proyecto y nombre</string>
     <string name="lista_encontrados">Lista de puntos encontrados</string>
 
 
@@ -81,6 +81,7 @@
     <string name="no_base_datos">La aplicación Base de Datos no se encuentra disponible</string>
     <string name="comprar">Comprar</string>
 
-    <string name="msg_landa_mc">Antes de seleccionar un punto, debes introducir la longitud del meridiano central correspondiente</string>
+    <string name="msg_landa_mc">Antes de seleccionar un punto, debes introducir la longitud del meridiano central correspondiente al punto que vas a seleccionar</string>
+    <string name="introduzca_landa_mc">Por favor, introduzca la longitud del meridiano central correspondiente a la coordenada seleccionada</string>
 
 </resources>

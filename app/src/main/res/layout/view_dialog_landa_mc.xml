@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dip"
+        android:background="#773A6734"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/introduzca_landa_mc"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:layout_weight="1"
+            android:id="@+id/editText" />
+
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/aceptar"
+            android:id="@+id/button"
+            style="@style/ButtonText"
+            android:layout_weight="1"
+            android:background="@drawable/green_button"/>
+    </LinearLayout>
+</LinearLayout>

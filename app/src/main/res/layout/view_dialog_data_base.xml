@@ -23,19 +23,21 @@
         android:layout_marginLeft="5dip"
         android:layout_marginRight="5dip"
         android:layout_marginTop="5dip"
-        android:background="#773A6734"
+        android:background="#333A6734"
         android:baselineAligned="false"
         android:orientation="horizontal" >
 
         <LinearLayout
-            android:layout_width="0dip"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:layout_weight="5"
+            android:layout_marginRight="3dip"
+            android:background="#333A6734">
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/datos_punto"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -46,17 +48,18 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/hint_proyecto_nombre"
-                android:inputType="text" >
+                android:inputType="text">
 
                 <requestFocus />
             </EditText>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:background="#333A6734"
+            android:layout_marginLeft="2dip">
 
             <TextView
                 android:id="@+id/textView3"
@@ -69,7 +72,7 @@
                 android:id="@+id/editText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text" />
+                android:inputType="numberSigned" />
         </LinearLayout>
     </LinearLayout>
 
@@ -111,9 +114,9 @@
     <Button
         android:id="@+id/button1"
         style="@style/ButtonText"
+        android:background="@drawable/green_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/green_button"
         android:text="@string/cancelar" />
 
 </LinearLayout>

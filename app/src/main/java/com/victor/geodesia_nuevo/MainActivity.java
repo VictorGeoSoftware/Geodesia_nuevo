@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -181,6 +182,7 @@ import android.widget.Toast;
         Button btnCancel;
 
 
+
         //----- VARIABLES
         //----- Table to read is defined
         Uri camposUri;
@@ -257,6 +259,44 @@ import android.widget.Toast;
                         }
                     });
                 }
+
+                lstFoundedPoints.setOnItemClickListener(new OnItemClickListener()
+                {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, final int i, long l) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                        LayoutInflater inflater = getActivity().getLayoutInflater();
+                        View selectedPointDialogView = inflater.inflate(R.layout.view_dialog_landa_mc, null);
+
+                        final EditText edtLantaMc = (EditText) selectedPointDialogView.findViewById(R.id.editText1);
+                        Button btnAccept = (Button) selectedPointDialogView.findViewById(R.id.button1);
+
+                        btnAccept.setOnClickListener(new View.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(View arg0) {
+                                if(!edtLantaMc.getText().toString().contentEquals(""))
+                                {
+                                    String pointProject = arrayFoundPoints.get(i).getProject();
+                                    String pointName = arrayFoundPoints.get(i).getPointName();
+                                    String pointLatitude = arrayFoundPoints.get(i).getLatitude();
+                                    String pointLongitude = arrayFoundPoints.get(i).getLongitude();
+                                    String pointX = arrayFoundPoints.get(i).getX();
+                                    String pointY = arrayFoundPoints.get(i).getY();
+                                    String pointLandaMc = edtLandaMc.getText().toString();
+                                }
+                            }
+                        });
+                    }
+                });
+
+                btnCancel.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v) {
+                        dismiss();
+                    }
+                });
             }
             catch (Exception e)
             {
@@ -283,13 +323,7 @@ import android.widget.Toast;
             }
 
 
-            btnCancel.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View v) {
-                    dismiss();
-                }
-            });
+
         }
 
         private class FoundPointsAdapter extends ArrayAdapter<FoundPointsModel>

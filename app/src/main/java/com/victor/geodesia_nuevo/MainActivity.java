@@ -177,7 +177,6 @@ import android.widget.Toast;
 
         //----- ELEMENTS
         EditText edtPointData;
-        EditText edtLandaMc;
         ListView lstFoundedPoints;
         Button btnCancel;
 
@@ -199,7 +198,6 @@ import android.widget.Toast;
             getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
             edtPointData = (EditText) view.findViewById(R.id.editText1);
-            edtLandaMc = (EditText) view.findViewById(R.id.editText2);
             lstFoundedPoints = (ListView) view.findViewById(R.id.listView1);
             btnCancel = (Button) view.findViewById(R.id.button1);
 
@@ -267,15 +265,20 @@ import android.widget.Toast;
                         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                         LayoutInflater inflater = getActivity().getLayoutInflater();
                         View selectedPointDialogView = inflater.inflate(R.layout.view_dialog_landa_mc, null);
+                        builder.setView(selectedPointDialogView);
 
-                        final EditText edtLantaMc = (EditText) selectedPointDialogView.findViewById(R.id.editText1);
-                        Button btnAccept = (Button) selectedPointDialogView.findViewById(R.id.button1);
+                        final EditText edtLandaMc = (EditText) selectedPointDialogView.findViewById(R.id.editText);
+                        Button btnAccept = (Button) selectedPointDialogView.findViewById(R.id.button);
+                        final AlertDialog selectedPointDialog = builder.create();
 
                         btnAccept.setOnClickListener(new View.OnClickListener()
                         {
                             @Override
                             public void onClick(View arg0) {
-                                if(!edtLantaMc.getText().toString().contentEquals(""))
+                                String pointLandaMc = edtLandaMc.getText().toString();
+                                boolean isDouble = checkDoubleValue(pointLandaMc);
+
+                                if(isDouble)
                                 {
                                     String pointProject = arrayFoundPoints.get(i).getProject();
                                     String pointName = arrayFoundPoints.get(i).getPointName();
@@ -283,10 +286,21 @@ import android.widget.Toast;
                                     String pointLongitude = arrayFoundPoints.get(i).getLongitude();
                                     String pointX = arrayFoundPoints.get(i).getX();
                                     String pointY = arrayFoundPoints.get(i).getY();
-                                    String pointLandaMc = edtLandaMc.getText().toString();
+
+                                    String returnValue = pointProject + " " + pointName + " " + pointLatitude +
+                                            " " + pointLongitude + " " +pointX + " " + pointY + " " + pointLandaMc;
+
+                                    // Devolvería el valor
+                                    Log.i("dialog", "landaMc: " + pointLandaMc);
+                                    Log.i("dialog", "returnValue: " + returnValue);
+
+                                    selectedPointDialog.dismiss();
+                                    dismiss();
                                 }
                             }
                         });
+
+                        selectedPointDialog.show();
                     }
                 });
 
@@ -307,7 +321,6 @@ import android.widget.Toast;
                 lstFoundedPoints.setAdapter(adapter);
 
                 edtPointData.setEnabled(false);
-                edtLandaMc.setEnabled(false);
                 btnCancel.setText(getString(R.string.comprar));
                 btnCancel.setOnClickListener(new View.OnClickListener()
                 {
@@ -321,9 +334,19 @@ import android.widget.Toast;
                     }
                 });
             }
+        }
 
-
-
+        public boolean checkDoubleValue(String value)
+        {
+            try
+            {
+                double valueToCheck = Double.parseDouble(value);
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
         }
 
         private class FoundPointsAdapter extends ArrayAdapter<FoundPointsModel>
